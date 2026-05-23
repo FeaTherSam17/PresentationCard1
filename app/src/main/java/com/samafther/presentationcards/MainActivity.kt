@@ -27,6 +27,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -65,7 +66,9 @@ fun PresentationCard(modifier: Modifier = Modifier){
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        PresentationCardInfo("Samuel Alcantara","Android developer")
+        PresentationCardInfo(stringResource(R.string.name_string),
+            stringResource(R.string.title_string)
+         )
         Spacer(modifier= Modifier.height(48.dp))
         PresentationCardSocial()
     }
@@ -101,9 +104,9 @@ fun PresentationCardSocial(){
         Column(
             verticalArrangement = Arrangement.SpaceAround
         ) {
-            LinkPresentation("+ 000 000 0000", Icons.Default.Phone)
-            LinkPresentation("@violet", Icons.Default.Person)
-            LinkPresentation("violet@gmail.com", Icons.Default.Email)
+            LinkPresentation(stringResource(R.string.numer_string), Icons.Default.Phone)
+            LinkPresentation(stringResource(R.string.ig_string), Icons.Default.Person)
+            LinkPresentation(stringResource(R.string.email_string), Icons.Default.Email)
         }
     }
 }
