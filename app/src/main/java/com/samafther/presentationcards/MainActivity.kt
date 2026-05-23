@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -59,8 +60,13 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
 @Composable
 fun PresentationCard(modifier: Modifier = Modifier){
-    Column() {
+    Column(
+        modifier = modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
         PresentationCardInfo("Samuel Alcantara","Android developer")
+        Spacer(modifier= Modifier.height(48.dp))
         PresentationCardSocial()
     }
 }
